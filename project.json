@@ -1,0 +1,19 @@
+{
+  "name": "report-number-auditor",
+  "title": "Report Number Auditor",
+  "source_collection": "KalyanM45/AI-Project-Gallery",
+  "source_entry_url": "https://github.com/KalyanM45/Multi-Agentic-Blog-Generation/blob/8b743e21ac0e940dc8bd159f5d94a8f5eb17c630/README.md",
+  "skills": [
+    "Python",
+    "evaluation contracts",
+    "reproducibility",
+    "technical writing"
+  ],
+  "problem": "Bind numerical report claims to artifact, population, denominator and unit.",
+  "limitations": [
+    "Structured claim sidecars only; no natural-language entailment or LLM evaluation."
+  ],
+  "test_command": "python -m unittest discover -s tests -v",
+  "run_command": "python run.py --output runs/ci",
+  "test_count": 9
+}

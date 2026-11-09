@@ -1,0 +1,39 @@
+{
+  "experiment": "fictional-duration-trial",
+  "metrics": {
+    "baseline_completion": {
+      "count_unit": "orders",
+      "denominator": 100,
+      "kind": "ratio",
+      "numerator": 40,
+      "population": "test-orders"
+    },
+    "latency": {
+      "kind": "scalar",
+      "population": "test-requests",
+      "unit": "milliseconds",
+      "value": 12.345
+    },
+    "test_completion": {
+      "count_unit": "orders",
+      "denominator": 100,
+      "kind": "ratio",
+      "numerator": 52,
+      "population": "test-orders"
+    },
+    "train_completion": {
+      "count_unit": "orders",
+      "denominator": 100,
+      "kind": "ratio",
+      "numerator": 90,
+      "population": "train-orders"
+    },
+    "zero": {
+      "count_unit": "orders",
+      "denominator": 100,
+      "kind": "ratio",
+      "numerator": 0,
+      "population": "test-orders"
+    }
+  }
+}

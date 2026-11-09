@@ -1,0 +1,142 @@
+[
+  {
+    "expected": true,
+    "id": "valid-percent",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-fraction",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-count",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-scalar",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-points",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-relative",
+    "number_presence_accept": false,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": true,
+    "id": "valid-rounding",
+    "number_presence_accept": true,
+    "reason": "supported",
+    "typed_accept": true
+  },
+  {
+    "expected": false,
+    "id": "stale-bytes",
+    "number_presence_accept": true,
+    "reason": "artifact_digest_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "wrong-population",
+    "number_presence_accept": true,
+    "reason": "population_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "wrong-denominator",
+    "number_presence_accept": true,
+    "reason": "denominator_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "train-swap",
+    "number_presence_accept": true,
+    "reason": "population_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "wrong-unit",
+    "number_presence_accept": true,
+    "reason": "unit_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "unsupported-rescale",
+    "number_presence_accept": false,
+    "reason": "value_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "percent-as-points",
+    "number_presence_accept": false,
+    "reason": "unit_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "wrong-baseline-population",
+    "number_presence_accept": false,
+    "reason": "incomparable_baseline",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "wrong-baseline-count",
+    "number_presence_accept": false,
+    "reason": "baseline_denominator_mismatch",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "zero-relative-base",
+    "number_presence_accept": true,
+    "reason": "zero_baseline",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "unknown-metric",
+    "number_presence_accept": true,
+    "reason": "malformed_or_missing_evidence",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "too-many-digits",
+    "number_presence_accept": true,
+    "reason": "malformed_or_missing_evidence",
+    "typed_accept": false
+  },
+  {
+    "expected": false,
+    "id": "numerical-near-miss",
+    "number_presence_accept": true,
+    "reason": "value_mismatch",
+    "typed_accept": false
+  }
+]

@@ -1,0 +1,294 @@
+[
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": true,
+    "id": "valid-percent"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 2,
+      "metric": "test_completion",
+      "operation": "fraction",
+      "population": "test-orders",
+      "unit": "fraction",
+      "value": 0.52
+    },
+    "expected": true,
+    "id": "valid-fraction"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 0,
+      "metric": "test_completion",
+      "operation": "count",
+      "population": "test-orders",
+      "unit": "orders",
+      "value": 52
+    },
+    "expected": true,
+    "id": "valid-count"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 2,
+      "metric": "latency",
+      "operation": "scalar",
+      "population": "test-requests",
+      "unit": "milliseconds",
+      "value": 12.35
+    },
+    "expected": true,
+    "id": "valid-scalar"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 100,
+      "baseline_metric": "baseline_completion",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "difference_points",
+      "population": "test-orders",
+      "unit": "percentage_points",
+      "value": 12
+    },
+    "expected": true,
+    "id": "valid-points"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 100,
+      "baseline_metric": "baseline_completion",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "relative_change",
+      "population": "test-orders",
+      "unit": "percent_change",
+      "value": 30
+    },
+    "expected": true,
+    "id": "valid-relative"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "latency",
+      "operation": "scalar",
+      "population": "test-requests",
+      "unit": "milliseconds",
+      "value": 12.3
+    },
+    "expected": true,
+    "id": "valid-rounding"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": false,
+    "id": "stale-bytes"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "all-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": false,
+    "id": "wrong-population"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 120,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": false,
+    "id": "wrong-denominator"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "train_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 90
+    },
+    "expected": false,
+    "id": "train-swap"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "fraction",
+      "value": 52
+    },
+    "expected": false,
+    "id": "wrong-unit"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 5200
+    },
+    "expected": false,
+    "id": "unsupported-rescale"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 100,
+      "baseline_metric": "baseline_completion",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "difference_points",
+      "population": "test-orders",
+      "unit": "percent_change",
+      "value": 30
+    },
+    "expected": false,
+    "id": "percent-as-points"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 100,
+      "baseline_metric": "train_completion",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "difference_points",
+      "population": "test-orders",
+      "unit": "percentage_points",
+      "value": -38
+    },
+    "expected": false,
+    "id": "wrong-baseline-population"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 1000,
+      "baseline_metric": "baseline_completion",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "relative_change",
+      "population": "test-orders",
+      "unit": "percent_change",
+      "value": 30
+    },
+    "expected": false,
+    "id": "wrong-baseline-count"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "baseline_denominator": 100,
+      "baseline_metric": "zero",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "relative_change",
+      "population": "test-orders",
+      "unit": "percent_change",
+      "value": 52
+    },
+    "expected": false,
+    "id": "zero-relative-base"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "missing",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": false,
+    "id": "unknown-metric"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 9,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52
+    },
+    "expected": false,
+    "id": "too-many-digits"
+  },
+  {
+    "claim": {
+      "artifact_sha256": "41f709132a4f1c6afb997a0a5b9818128fe947fd1a8aa9840f3bb561a8248c5d",
+      "denominator": 100,
+      "digits": 1,
+      "metric": "test_completion",
+      "operation": "percent",
+      "population": "test-orders",
+      "unit": "percent",
+      "value": 52.11
+    },
+    "expected": false,
+    "id": "numerical-near-miss"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "baseline_correct": 10,
+  "baseline_false_accepts": 9,
+  "cases": 20,
+  "scope": "Authored structured-claim contracts, not natural-language factuality.",
+  "typed_correct": 20,
+  "typed_false_accepts": 0,
+  "valid_claims": 7
+}
